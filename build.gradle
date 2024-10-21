@@ -46,8 +46,9 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-graphql', version: '3.3.4'
-    testImplementation group: 'com.h2database', name: 'h2', version: '2.3.232'
 
+    testImplementation group: 'com.h2database', name: 'h2', version: '2.3.232'
+    testImplementation 'org.springframework.graphql:spring-graphql-test:1.3.2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     implementation group: 'org.springframework', name: 'spring-webflux', version: '6.1.14'
@@ -58,7 +59,8 @@ tasks.named('test') {
 }
 
 def jacocoExclude = [
-        "**/swagger/*"
+        "**/swagger/*",
+        "**/configuration/initialization/*"
 ]
 
 test {
