@@ -1,0 +1,39 @@
+type Query{
+    listarPasajeros: [InfoPasajero],
+    listarContactoEmergencia: [ContactoEmergencia]
+}
+
+type Mutation{
+    guardarInfoPasajero(infoPasajero:InfoPasajeroRequest):InfoPasajero,
+    guardarContactoEmergencia(contactoEmergencia:ContactoEmergenciaRequest):ContactoEmergencia,
+    confirmarCheckIn(idPasajero: Int!): InfoPasajero
+}
+
+type InfoPasajero{
+    IdPasajero : Int,
+    ContactoEmergencia: ContactoEmergencia!,
+    nacionalidad: String!,
+    motivoViaje: String!,
+    direccionEntregarMaletaPerdia: String!,
+    checkIn: Boolean!
+}
+
+type ContactoEmergencia{
+    idContacto: Int,
+    nombreCompleto: String!,
+    telefono: String!,
+    email: String!
+}
+
+input InfoPasajeroRequest{
+    ContactoEmergencia: ContactoEmergenciaRequest!,
+    nacionalidad: String!,
+    motivoViaje: String!,
+    direccionEntregarMaletaPerdia: String!,
+}
+
+input ContactoEmergenciaRequest{
+    nombreCompleto: String!,
+    telefono: String!,
+    email: String!
+}
