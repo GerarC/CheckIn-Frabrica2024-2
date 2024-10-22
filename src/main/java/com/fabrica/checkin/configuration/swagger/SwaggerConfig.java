@@ -1,9 +1,9 @@
 package com.fabrica.checkin.configuration.swagger;
 
-import com.fabrica.checkin.configuration.Generated;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
+import lombok.Generated;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

@@ -1,16 +1,17 @@
 package com.fabrica.checkin.configuration.initialization;
 
-import com.fabrica.checkin.configuration.Generated;
 import com.fabrica.checkin.model.ContactoEmergencia;
 import com.fabrica.checkin.model.InfoPasajero;
 import com.fabrica.checkin.repository.ContactoEmergenciaRepository;
 import com.fabrica.checkin.repository.InfoPasajeroRepository;
+import lombok.Generated;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.UUID;
 
+@Generated
 @Configuration
 public class DataInitializer {
     @Bean
