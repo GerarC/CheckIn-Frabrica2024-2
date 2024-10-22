@@ -60,7 +60,6 @@ tasks.named('test') {
 
 def jacocoExclude = [
         "**/swagger/*",
-        "**/configuration/initialization/*"
 ]
 
 test {
